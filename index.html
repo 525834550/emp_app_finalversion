@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Employee Managment</title>
+       
+         <link type="text/css" rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+         <link type="text/css" rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+         <link type="text/css" rel="stylesheet" href="./node_modules/glyphicons-halflings/css/glyphicons-halflings.css">
+           <!-- <link type="text/css" rel="stylesheet" href="./node_modules/bootstrap/dist/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="./css/app.css">
+
+</head>
+<body>
+<!-- Header and logo and username -->
+    <div class="header">
+        <div class="header__margin">
+            <img alt="emp_logo" class="logo" src="./images/logo.png">
+            <span id="seletedAccount"></span>
+            <ul id="userMenu" class="pull-right">
+                <li><a href="#"><span class=""></span>admin@contoso.com</a></li>
+                <li><a href="#" class="cstm_signout"><span class=""></span>Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h1 id="page-mainTitle">Employee Managment</h1>
+    <hr/>
+    <br/>
+
+<!-- search -->
+   <input class="form__search" id="searchInput" placeholder="Search">
+
+<!-- Add New Employee -->
+    <div class="createempBtn buttontoggle pull-right" data-target="#createnewemp" data-backdrop="static" data-keyboard="false" data-toggle="modal">
+        <button type="button" class="btn btn-primary">Add New</button>
+    </div>
+
+<!-- Saved or Delete Alert -->
+    <div id="alertCreation" class="alert alert-block" style="">
+                    <a class="close" href="javascript:void(0)" tabindex="0" title="click to close the alert box">×</a>
+                    <p>
+                        <i class="fa fa-bell"></i>&nbsp;<span class="approvalStatus"></span>
+                    </p>
+    </div>
+
+<!-- Employee table -->
+    <div class="panel panel-primary emp-model">
+        <div id="showData"></div>
+    </div>
+
+<!-- View Slide in Slideout -->
+    <div id="viewslideout" class="viewslideout_state">
+        <div id="view__slidecontent">
+            Employee Information
+        </div>
+        <div class="viewemp__content">
+            <img alt="emp_logo" class="logo" src="./images/logo.png">   
+            <p>Address</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+        </div>
+        <div id="view__slidein"></div>
+    </div>
+
+<!-- Add New Employee Model -->
+
+    <div class="modal fade" id="createnewemp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="empReview">
+                    <div class="emp_title">
+                        <h4 class="modal-title">Add New Employee</h4>
+                    </div>
+                    <div class="modal-body">
+                            <form class="empReview_model">
+                            <div class="col-md-12">
+                                <div id="Employee_new" class="col-sm-5">
+                                    <fieldset>
+                                            <label for="name" class="clear">Name</label>
+                                             <input type="text" class="FirstName_new" id="Fname" placeholder="Name">
+                                            <label for="name" class="clear">Last Name</label>
+                                             <input type="text" class="LastName_new" id="name" placeholder="LName">
+                                           
+                                            <label class="clear">Email</label>
+                                            <input type="text" class="Email_new" placeholder="Email">
+                                            <label class="clear">Phone</label>
+                                            <input type="text" class="Phone_new" placeholder="Phone">
+                                            <label class="clear">Address</label>
+                                            <textarea class="Address_new" rows="3" placeholder="Address"></textarea>
+
+                                            <label class="gender">Gender</label>
+                                           <label for="Male">
+                                           <input type="radio" class="gender_new" name="gender" value="Male"> Male</label>
+                                           <label for="Female">
+                                           <input type="radio" class="gender_new" name="gender" value="Female"> Female</label>
+                                            
+                                         <div class="clear"></div>
+                                            
+                                            <label class="state">State</label>
+                                            <label for="Active"><input type="radio"  class="State_new" name="State" value="Active"> Active</label>
+                                           <label for="Inactive"><input type="radio" class="State_new" name="State" value="Inactive"> Inactive</label>      
+
+                                    </fieldset>                                                   
+                                 </div>
+
+                                <div class="col-md-7 model__picupload">
+                                            <div>
+                                                <h4 class="title">Upload Profile Pic</h4>
+                                            </div>
+                                                           
+                                            <div>                                       
+                                                <input type="file" id="pic-upload-file" name="profilepic" class="form-control" accept="image/*" />
+                                            </div>
+
+                                            <div>
+                                                <button class="btn btn-primary disabled" id="upload-template-btn" type="button" ><span class="glyphicon glyphicon-open"></span>Upload</button>
+                                            </div>
+
+                                            <img src="" height="150" alt="" class="model__picupload__img">
+                                          
+                                </div>
+                            </div>
+                            </form>
+                    </div>
+                </div>
+
+
+                <div class="pull-right" id="modelShowBtns">
+                    <input data-dismiss="modal" type="button" class="btn btn-primary pull-right" id="saveEmpModel" value="Save">
+                    <input data-dismiss="modal" type="button" class="btn btn-primary pull-right" value="cancel" id="cancelEmpModel">
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+<!-- Edit mode modelpopup -->
+     <div class="modal fade" id="editnewemp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="edit__empReview">
+                    <div class="edit__emp_title">
+                            <h4 class="modal-title">Add New Employee</h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+
+                <div class="pull-right" id="modelShowBtns">
+                    <input data-dismiss="modal" type="button" class="btn btn-primary pull-right" id="editnewemp__saveEmpModel" value="Save">
+                    <input data-dismiss="modal" type="button" class="btn btn-primary pull-right" value="cancel" id="editnewemp__cancelEmpModel">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Delete mode modelpopup -->
+    <div class="modal fade" id="delemp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="del__empReview">
+                    <div class="edit__emp_title">
+                            <h4 class="modal-title">Delete Employee</h4>
+                    </div>
+                </div>
+
+                <div class="pull-right" id="modelShowBtns">
+                    <input data-dismiss="modal" type="button" class="btn btn-primary pull-right" id="delemp__yes" value="Yes">
+                    <input data-dismiss="modal" onclick="deleteemp()" type="button" class="btn btn-primary pull-right" value="No" id="delemp__no">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>Footer</footer>
+
+<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./scripts/main.js"></script>
+</html>

@@ -1,0 +1,237 @@
+body {
+  font-size: 12px;
+  overflow-x: hidden; }
+
+.marginbody, .header .header__margin, hr, .emp-model {
+  width: 95%;
+  margin: auto; }
+
+.header {
+  width: 100%;
+  padding: 1px;
+  background: #d8d8d8; }
+  .header .logo {
+    width: 140px;
+    margin: 0px; }
+
+#userMenu {
+  list-style-type: none;
+  font-family: arial;
+  color: #000;
+  font-size: 12px;
+  margin-top: 13px; }
+  #userMenu li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 10px; }
+  #userMenu li:nth-child(1) {
+    border-right: 1px solid #b5b2b2; }
+  #userMenu a {
+    color: #000;
+    text-decoration: none;
+    padding: 7px 10px 7px 27px; }
+    #userMenu a .cstm_help {
+      padding-left: 10px; }
+  #userMenu .cstm_signout {
+    color: #0275d8; }
+
+.btnclass, .btn-primary, .btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle, .btn-primary:hover, #modelShowBtns input {
+  color: #b5b2b2;
+  background-color: #fff;
+  cursor: pointer; }
+
+.btn-primary, .btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle, .btn-primary:hover {
+  border-color: #fff; }
+
+#modelShowBtns input {
+  border-color: #484747;
+  margin: 10px 10px; }
+
+#modelShowBtns input:hover {
+  background-color: #484747;
+  color: #fff; }
+
+.tables, .table tr th {
+  background-color: #5f6167;
+  color: #fff;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Helvetica; }
+
+.formcss, label, input, button, select, textarea, input.form-control {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  display: block; }
+
+.panel-body {
+  padding: 15px; }
+
+#page-mainTitle {
+  font-size: 24px;
+  padding: 15px 0 10px;
+  margin: 0 auto;
+  width: 50%;
+  display: inline-block;
+  color: #2C3E50;
+  text-transform: capitalize;
+  margin-left: 37px; }
+
+.createempBtn {
+  margin-right: 19px; }
+
+#createnewemp .model__picupload, #editnewemp .model__picupload {
+  position: absolute;
+  top: 20px;
+  right: 0; }
+
+#createnewemp .modal-content, #editnewemp .modal-content {
+  width: 700px; }
+
+#createnewemp #Employee_new label, #editnewemp #Employee_new label {
+  float: left; }
+
+#createnewemp #Employee_new .FirstName_new, #createnewemp #Employee_new .LastName_new, #createnewemp #Employee_new .Email_new, #createnewemp #Employee_new .Phone_new, #createnewemp #Employee_new .Address_new, #editnewemp #Employee_new .FirstName_new, #editnewemp #Employee_new .LastName_new, #editnewemp #Employee_new .Email_new, #editnewemp #Employee_new .Phone_new, #editnewemp #Employee_new .Address_new {
+  margin-left: 60px;
+  margin: 0px 0px 10px 60px; }
+
+#createnewemp #Employee_new .state, #createnewemp #Employee_new .State_new, #createnewemp #Employee_new .gender, #createnewemp #Employee_new .gender_new, #editnewemp #Employee_new .state, #editnewemp #Employee_new .State_new, #editnewemp #Employee_new .gender, #editnewemp #Employee_new .gender_new {
+  display: inline; }
+
+#createnewemp #Employee_new .gender, #createnewemp #Employee_new .state, #editnewemp #Employee_new .gender, #editnewemp #Employee_new .state {
+  margin-right: 10px; }
+
+#createnewemp #Employee_new .gender_new, #createnewemp #Employee_new .State_new, #editnewemp #Employee_new .gender_new, #editnewemp #Employee_new .State_new {
+  margin-left: 10px; }
+
+#createnewemp #Employee_new label[for=Active], #editnewemp #Employee_new label[for=Active] {
+  margin-left: 12px; }
+
+#createnewemp #Employee_new label[for=Inactive], #editnewemp #Employee_new label[for=Inactive] {
+  margin-left: -5px; }
+
+#createnewemp .model__picupload, #editnewemp .model__picupload {
+  border-left: 1px solid #484747; }
+
+#createnewemp .clear, #editnewemp .clear {
+  clear: both; }
+
+.inactive {
+  font-style: italic;
+  color: grey; }
+
+.active {
+  font-weight: bold; }
+
+#viewslideout {
+  background: #ececec;
+  position: absolute;
+  width: 280px;
+  height: 80%;
+  top: 9%;
+  right: -280px;
+  padding-left: 20px; }
+
+#view__slidein {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/double-arrow-right.png");
+  background-position: 0% 0%;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  cursor: pointer; }
+  #view__slidein #view__slidecontent {
+    float: left;
+    background: #d8d8d8;
+    height: 25px;
+    width: 100%; }
+
+.viewemp__content {
+  margin-top: 85px; }
+  .viewemp__content p {
+    margin-top: 25px; }
+
+div#view, div#edit, div#del {
+  cursor: pointer; }
+
+#createnewemp .hidecreatenewemp {
+  display: none; }
+
+#searchInput {
+  background-image: url("../images/searchicon.png");
+  background-position: 235px 5px;
+  background-repeat: no-repeat;
+  width: 20%;
+  font-size: 16px;
+  padding: 5px 5px 5px 6px;
+  border: 1px solid #ddd;
+  margin-left: 34px; }
+
+#pic-upload-file {
+  display: inline;
+  float: left; }
+
+.model__picupload .form-control {
+  width: 70%; }
+
+#upload-template-btn {
+  margin-left: 10px; }
+
+#upload-template-btn:hover {
+  background-color: #0275d8;
+  border-color: #0275d8; }
+
+.model__picupload__img {
+  margin-top: 10px; }
+
+footer {
+  width: 100%;
+  padding: 1px;
+  background: #e6e6e6;
+  text-align: center;
+  font-weight: bold; }
+
+#alertCreation {
+  display: none; }
+
+#alertCreation.alert-success {
+  display: block; }
+
+.alert {
+  padding: 0px;
+  margin: 45px; }
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  .modal-dialog {
+    max-width: 100%;
+    margin: 30px 30px; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #searchInput {
+    background-position: 120px 5px; }
+  #modelShowBtns input:hover {
+    background-color: #484747;
+    color: #fff; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #userMenu li {
+    display: block; }
+  #page-mainTitle {
+    font-size: 12px; }
+  #searchInput {
+    background-position: 85px 2px;
+    width: 30%;
+    margin-left: 10px;
+    padding: 0px;
+    float: left; }
+  #createnewemp .modal-content, #editnewemp .modal-content {
+    width: 350px; }
+  #createnewemp .model__picupload, #editnewemp .model__picupload {
+    border: none;
+    position: unset; }
+  .viewslideout_state {
+    display: none; } }
